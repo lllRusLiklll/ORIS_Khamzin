@@ -1,0 +1,644 @@
+body {
+    min-height: 100%;
+    height: auto;
+    position: relative;
+}
+body.v6 {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+body.v6 {
+    background: #1b2838;
+}
+body.v6 {
+    position: relative;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c6d4df;
+    font-size: 12px;
+}
+
+body.login {
+    color: #E9E9E9;
+    background-color: #181A21;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+body {
+    color: #969696;
+    font-family: "Motiva Sans",Arial,Helvetica,sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+.responsive_page_frame {
+    position: relative;
+}
+.local_header {
+    display: none;
+    background: #171a21;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+    box-shadow: 0 0 7px 0 rgb(0 0 0 / 75%);
+    overflow: hidden;
+    padding: 13px 8px;
+}
+.menu_logo {
+    left: 8px;
+    position: absolute;
+    top: 9px;
+    cursor: pointer;
+    width: 36px;
+    height: 31px;
+}
+.local_logo_img {
+    vertical-align: middle;
+    height: 36px;
+}
+.header {
+    background: #171a21;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content {
+    position: relative;
+    width: 940px;
+    height: 104px;
+    margin: 0px auto;
+    z-index: 402;
+}
+.logo {
+    float: left;
+    padding-top: 30px;
+    margin-right: 40px;
+    width: 176px;
+    height: 44px;
+}
+.container {
+    position: absolute;
+    left: 200px;
+}
+.menuitem {
+    display: block;
+    position: relative;
+    padding-top: 45px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    line-height: 16px;
+    color: #b8b6b4;
+    float: left;
+    text-transform: uppercase;
+}
+.menuitem:hover {
+    color: white;
+}
+.global_actions {
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    height: 21px;
+    line-height: 21px;
+    color: #b8b6b4;
+    font-size: 11px;
+    z-index: 401;
+}
+.global_action_menu {
+    line-height: 24px;
+    vertical-align: top;
+    display: inline-block;
+}
+.install_steam {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    height: 21px;
+    line-height: 24px;
+    margin-right: 3px;
+}
+.install_steam_btn {
+    background-color: #5c7e10;
+    display: inline-block;
+    padding-left: 35px;
+    padding-right: 9px;
+    background-position: 10px 5px;
+    background-image: url(https://store.cloudflare.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: #e5e4dc;
+    font-weight: normal;
+}
+.install_steam_btn:hover{
+    color: white;
+}
+.global_action_link {
+    color: #b8b6b4;
+    padding: 0 4px;
+    vertical-align: top;
+}
+.global_action_link:hover {
+    color: white;
+}
+.pulldown {
+    display: inline-block;
+    padding-left: 4px;
+    line-height: 25px;
+    vertical-align: top;
+    margin-right: 5px;
+    padding-right: 18px;
+    background-image: url(https://store.cloudflare.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.page_content {
+    width: 100%;
+    margin: 0 auto;
+}
+.login_container {
+    padding: 0px 8px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+}
+.login_div {
+    position: relative;
+}
+.login_dialog {
+    gap: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.login_title_container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 16px;
+}
+.login_title {
+    color: #fff;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: .055em;
+    font-weight: 200;
+}
+.login_form_container {
+    min-width: 636px;
+    background-color: #181a21;
+    border-radius: 4px;
+    padding: 24px 32px;
+}
+.login_form_content {
+    display: flex;
+    flex-direction: row;
+}
+.login_form {
+    flex: 1;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+}
+.text_field {
+    display: grid;
+    grid-template-areas:
+        "label hint"
+        "input input";
+    grid-template-columns: 1fr min-content;
+    gap: 2px;
+}
+.login_label {
+    color: #1999ff !important;
+    font-weight: 500;
+}
+.field_label {
+    color: #afafaf;
+    margin-bottom: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+.text_input {
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px;
+    background-color: #32353c;
+    outline: none;
+    font-size: 15px;
+    grid-area: input;
+    border: 1px solid #32353c;
+}
+.text_input:hover {
+    background-color: #393C44;
+}
+.checkbox_field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox {
+    width: 14px;
+    height: 14px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #32353c;
+    cursor: pointer;
+}
+.check {
+    width: 100%;
+    height: 100%;
+}
+.checkbox:hover {
+    background-color: #393C44;
+}
+.svg_check{
+    fill: #fff;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+}
+.checkbox_label {
+    color: #afafaf;
+    font-size: 12px;
+    user-select: none;
+    padding-left: 6px;
+}
+.sign_in_btn_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.submit_button {
+    width: 270px;
+    position: relative;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: center;
+    letter-spacing: .03em;
+    cursor: pointer;
+}
+.submit_button:hover {
+    background: linear-gradient(90deg, #06BFFF 50%, #2D73FF 100%);
+}
+.text_link {
+    text-align: center;
+    color: #afafaf;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.text_link:hover {
+    color: #dddddd;
+}
+.QR_section {
+    display: grid;
+    gap: 4px;
+    margin-left: 24px;
+}
+.QR_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+}
+.QR_label {
+    color: #1999ff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 6px 0px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+.QR_beta_container {
+    display: flex;
+    padding: 8px 0px;
+    align-items: center;
+}
+.QR_icon {
+    width: 120px;
+}
+.QR_beta {
+    font-size: 12px;
+    margin: 8px;
+    line-height: 16px;
+    color: #afafaf;
+}
+.more_btn {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: white;
+    padding: 8px 16px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 2px;
+}
+.show_QR {
+    width: 100%;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 24px;
+    color: #afafaf;
+    padding: 12px 0px;
+    cursor: pointer;
+}
+.login_bottom {
+    display: flex;
+    padding-top: 48px;
+    justify-content: center;
+    background-color: #181A21;
+}
+.join_steam {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+}
+.subtext {
+    font-size: 14px;
+    color: #b8b6b4;
+    line-height: 20px;
+}
+.know_more {
+    font-size: 14px;
+    margin-top: 10px;
+    color: white;
+    line-height: 20px;
+}
+.know_more:hover {
+    color: #06BFFF;
+}
+.join_steam_btn_container {
+    margin-top: 20px;
+}
+.join_steam_btn {
+    margin: 20px 0 10px 0;
+    display: block;
+    padding: 1px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.join_steam_btn > span {
+    display: block;
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 2px;
+}
+.join_steam_btn > span:hover {
+    border: 1px solid white;
+}
+.footer_spacer {
+    height: 290px;
+}
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 0 60px 0;
+}
+.footer_content {
+    width: 940px;
+    margin: 0px auto;
+    padding-top: 16px;
+}
+.rule {
+    border-top: 1px solid #363c44;
+    height: 8px;
+}
+.footer_logo_steam {
+    float: right;
+    padding-top: 2px;
+}
+.footer_logo {
+    float: left;
+    padding-top: 2px;
+}
+.footer_text {
+    float: left;
+    margin-left: 12px;
+    color: #8F98A0;
+    font-size: 12px;
+    line-height: 16px;
+}
+.footer_a {
+    color: #C6D4DF;
+}
+.valve_links {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 8px;
+    float: left;
+    font-weight: normal;
+    font-size: 13px;
+    color: #61686D;
+}
+.valve_a {
+    color: #C6D4DF;
+}
+
+.main_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: black;
+    z-index: 30;
+    width: 280px;
+    box-shadow: 0 0 7px 0 rgb(0 0 0 / 75%);
+}
+
+.menu_page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.main_menu_content {
+    background: #171a21;
+    font-size: 22px;
+    position: relative;
+    min-height: 100%;
+}
+
+.main_menu_items {
+    position: relative;
+    font-weight: 200;
+}
+
+.chevron {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAwCAYAAACG5f33AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABFxJREFUeNrkmg9klGEcx5/dMY4Y44hjxIgxRpSy7NwspSmNWZayGGmKFJGylCJSmlJMKctiylKa5aZpSmmMMWIcY4xxjGPEmPX72ffN23Z7732f3/Pe+97tx9dtd/e87/N+7n1+/563Ym1tTbmx8fHxLnq5QzqYSqXmbO+rMrMoaZDUz5dX6MsRl/A66OU5KUFK0/9xVb42QOLr/UTaLwZIsI7hoFG8VUsapferyhDeI1In/o7xdZL2Og2ocFrCBKkFv0Rlvo9JR0grZQKvl3Qrz/tLpCRpxhNAgteEXyDmcNL3pHbSaonDu0B67PB5ln0/adYVQILHt+0X0g4XJ39G6ilheJ0IGoVsAXdixhEgwWugl68kLz7uHulaCcJj/z5s8++FbJ50ADA3AyR4dYCnE2Uvkp6UELwU/HvM47gMlvPifwAJXi3gJQSTOkV6UwLw9sBF6WYSvwFxKbJhjc8LJ/aSdDjk8HYjOErSMAaYy7eE+aDpQrlPAfsDZzsZQni8un4JV9kIqc1K3/IFkWos5XrBSRxzp4CM/foPFAK6NkZqtee+W6UxcUCsE5yMXcI+e8QK0KpwPQ2CY3wnHcIKc5VIJ3BSyS+WQdjPBggvBrfUKDjGJODlvJZyNfTyjVQjPHkzaTkAeFyCvkW+p2vTcEc5z7WwwfQmqLp50NYc0I22SacVVOGmHyhMsC0bQp5YrLr5Kem80P38S5hFAG0lHief1YJJFatu5sbvdcH4TSWbGKCtyZAWJqG3STd9hHeZ9ECYPfCdN+fmy54AAmIjIMYEk+zB3WjaulAN6dqWbStjAAFRtxD3s24+gYgbFcBr9pr8awEExKNoBVVqTngFWf2Yoc7KqGAuOcCb8jpQGyAgSn91E3Wzl+bvVnNgeD91BosAAiLnWQPCpZNEzuXV6gEvLoDH+emE7vVHDCwf9mPdwiI/rZGo78KyjQtcSJsEnimAbK/Uekda1xKA6BbGTk3odngnSZ+lF24KIBu3868Ixte5jOxWz1K3ycGV0Bm1vqOowgSQ7aEwSeaA8MEhmlqdFUmvshtlpQojQKvSuC8Y34JkOJqnszKsZN3yc3A3KswA2a6S+gTjObLbN7qjiPSS/RZ2L/2mL9QvgGyXSC8E47mT0mvrrHQIjnUD7sW4mcgDnT6OYjmeFpyC04wmwfi7AOiL+XkHWhHvLOmd4BgSeH1+wisGQAsiNw5GVHGtH25ElTpAe9Y/VqTzvUbEVeUC0IJ4XK1vD/ppQ3AbqtwA2ot3v55a+IgqY7VcAbLx9ibvsU4bPi7Xte2qyDt/QQBkywGiqUc/JpTteZXtAJAtC4gZ4XG4EdqqNjxysR0AsvGea1LpP1Y3BZ+6HNQFBA2QzXr22OtDSDOAlwty8mEAyMZ7sM3K/UNIs1j+2aAnHhaAFhQ3EC3Yi2GYdJgAulmWC4C3EJYJhw2gU2CwAs5cmCYbRoD5UhNTKc+2AWhPjrOGk26j9leAAQDu6F3rDzHr6wAAAABJRU5ErkJggg==);
+    background-size: 100% 100%;
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    right: 37px;
+    top: calc( 50% - 6px );
+    transition: transform 0.25s;
+}
+
+.minor_menu_item {
+    font-size: 0.75em;
+    color: #8a8a8a !important;
+    border: none !important;
+}
+
+.minor {
+    display: block;
+    border-top: 1px solid #2f3138 !important;
+}
+
+.main_menu_footer_spacer {
+    height: 160px;
+}
+
+.main_menu_footer {
+    position: absolute;
+    line-height: 1.5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 10px;
+    white-space: normal;
+    color: #8a8a8a;
+    padding: 0 12px 24px 12px;
+}
+
+.main_menu_valve_links > a {
+    color: #8a8a8a;
+}
+
+@media (max-width: 940px) {
+    .content {
+        width: 100%;
+    }
+    
+    .footer_content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 910px) {
+    .header {
+        display: none;
+    }
+    
+    .menuitem {
+        float: none;
+        border-top: 1px solid #2f3138;
+        border-bottom: 1px solid #000000;
+        text-transform: none;
+        position: relative;
+        color: #bdbdbd;
+        background: #171a21;
+        width: 100%;
+        line-height: 2.5em;
+        padding: 0 12px;
+    }
+    
+    .local_header {
+        display: block;
+    }
+    
+    .page_content {
+        padding-top: 62px;
+        padding-bottom: 120px;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    .footer_spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .login_container {
+        padding-top: 12px;
+        padding-bottom: 0px;
+        background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #181A21;
+    }
+    
+    .login_title {
+        text-align: center;
+    }
+    
+    .login_form_container {
+        min-width: 0px;
+        background-color: transparent;
+    }
+    
+    .login_form_content {
+        flex-direction: column;
+    }
+    
+    .qr_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 48px 0 0;
+    }
+    
+    .qr_container {
+        align-items: center;
+    }
+    
+    .qr_icon {
+        display: none;
+    }
+    
+    .qr_beta {
+        text-align: center;
+    }
+    
+    .login_bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .join_steam {
+        order: 2;
+    }
+    
+    .join_steam_img {
+        order: 1;
+    }
+    
+    .join_steam_btn_container {
+        order: 0;
+    }
+}
