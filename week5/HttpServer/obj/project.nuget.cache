@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8+93Sql3r5mFk1mcBsv+5pQj1RWKXFb0Hq3uUqwS9RXpmUxOdW6tFJbSZIKpPZYbV/GAWOz+y86eAHXMp7OdMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Professional\\Documents\\ORIS_Khamzin\\week5\\HttpServer\\WebServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Professional\\.nuget\\packages\\mimemapping\\1.0.1.37\\mimemapping.1.0.1.37.nupkg.sha512"
+  ],
+  "logs": []
+}

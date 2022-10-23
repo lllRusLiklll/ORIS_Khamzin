@@ -1,0 +1,101 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "MimeMapping/1.0.1.37": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/MimeMapping.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MimeMapping.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MimeMapping/1.0.1.37": {
+      "sha512": "KyvZaEsIOlrbs3+uyqylnDy3QepY0iyVHEsYpefs7OGCBCfWnW7XuQ55hATazdkcav50GbX26TmhBO4lC05pjQ==",
+      "type": "package",
+      "path": "mimemapping/1.0.1.37",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/MimeMapping.dll",
+        "lib/netstandard1.1/MimeMapping.xml",
+        "lib/netstandard2.0/MimeMapping.dll",
+        "lib/netstandard2.0/MimeMapping.xml",
+        "lib/netstandard2.1/MimeMapping.dll",
+        "lib/netstandard2.1/MimeMapping.xml",
+        "mimemapping.1.0.1.37.nupkg.sha512",
+        "mimemapping.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "MimeMapping >= 1.0.1.37"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Professional\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Professional\\Documents\\ORIS_Khamzin\\week5\\HttpServer\\WebServer.csproj",
+      "projectName": "WebServer",
+      "projectPath": "C:\\Users\\Professional\\Documents\\ORIS_Khamzin\\week5\\HttpServer\\WebServer.csproj",
+      "packagesPath": "C:\\Users\\Professional\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Professional\\Documents\\ORIS_Khamzin\\week5\\HttpServer\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Professional\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "MimeMapping": {
+            "target": "Package",
+            "version": "[1.0.1.37, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

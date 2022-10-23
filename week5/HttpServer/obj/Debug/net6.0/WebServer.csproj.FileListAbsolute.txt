@@ -1,0 +1,17 @@
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\WebServer.exe
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\WebServer.deps.json
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\WebServer.runtimeconfig.json
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\WebServer.dll
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\ref\WebServer.dll
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\WebServer.pdb
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.csproj.AssemblyReference.cache
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.AssemblyInfoInputs.cache
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.AssemblyInfo.cs
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.csproj.CoreCompileInputs.cache
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.dll
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\ref\WebServer.dll
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.pdb
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.genruntimeconfig.cache
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\bin\Debug\net6.0\MimeMapping.dll
+C:\Users\Professional\Documents\ORIS_Khamzin\week5\HttpServer\obj\Debug\net6.0\WebServer.csproj.CopyComplete
