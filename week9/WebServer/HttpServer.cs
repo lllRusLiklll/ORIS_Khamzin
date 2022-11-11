@@ -174,8 +174,7 @@ namespace WebServer
             var method = FindMethods(controller.GetMethods().Where(t => t.GetCustomAttributes(true)
                 .Any(attr => attr.GetType().Name == $"Http{_httpContext.Request.HttpMethod}")),
                 methodName, methodType);
-                                                
-            
+
             if (method == null) return false;
 
             List<object> strParams;
@@ -201,7 +200,6 @@ namespace WebServer
             }
 
             strParams.Add(response);
-
 
             object[] queryParams = method.GetParameters()
                                 .Select((p, i) => Convert.ChangeType(strParams[i], p.ParameterType))

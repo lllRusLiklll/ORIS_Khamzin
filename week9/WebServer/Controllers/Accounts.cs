@@ -1,5 +1,4 @@
 ﻿using WebServer.Attributes;
-using System.Data.SqlClient;
 using System.Net;
 
 namespace WebServer.Controllers
@@ -14,7 +13,7 @@ namespace WebServer.Controllers
         public List<Account> GetAccounts(HttpListenerRequest request, HttpListenerResponse response)
         {
             var cookie = request.Cookies["SessionId"];
-            if (cookie is not null && cookie.Value.Contains("IsAuthorize: true"))
+            if (cookie != null)
                 return _db.Query(new AccountSpecification());
             else
             {
@@ -24,7 +23,7 @@ namespace WebServer.Controllers
         }
 
         [HttpGET("item")]
-        public Account GetAccountById(int id)
+        public Account? GetAccountById(int id)
         {
             return _db.Query(new AccountSpecificationById(id)).FirstOrDefault();
         }
@@ -32,13 +31,17 @@ namespace WebServer.Controllers
         [HttpGET("info")]
         public Account GetAccountInfo(HttpListenerRequest request, HttpListenerResponse response)
         {
+            var manager = SessionManager.GetInstance();
             var cookie = request.Cookies["SessionId"];
-            if (cookie is not null && cookie.Value.Contains("IsAuthorize=true"))
-            {
-                var id = int.Parse(cookie.Value.Split("Id=")[1].Split("}")[0]);
-                var result= _db.Query(new AccountSpecificationById(id)).FirstOrDefault();
-                if (result != null)
-                    return result;
+            if (cookie != null)
+            {   
+                if (manager.CheckSession(Guid.Parse(cookie.Value))) 
+                {
+                    var session = manager.GetInformation(Guid.Parse(cookie.Value));
+                    var result = _db.Query(new AccountSpecificationById(session.AccountId)).FirstOrDefault();
+                    if (result != null)
+                        return result;
+                }
             }
             response.StatusCode = 401;
             return null;
@@ -56,10 +59,21 @@ namespace WebServer.Controllers
         public bool Login(string login, string password, HttpListenerResponse response)
         {
             var account = _db.Query(new AccountSpecificationByLoginPassword(login, password));
-            if (account.Count() > 0)
+            if (account.Count() == 1)
             {
-                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize=true Id="
-                    + account.First().Id + "}; Path=/");
+                var sessionId = Guid.NewGuid();
+                response.Headers.Set("Set-Cookie", $"SessionId={sessionId}; Path=/");
+
+                var manager = SessionManager.GetInstance();
+                var session = new Session()
+                {
+                    Id = sessionId,
+                    AccountId = account.First().Id,
+                    Email = account.First().Login,
+                    CreatedDateTime = DateTime.Now,
+                };
+                manager.CreateSession(session);
+
                 return true;
             }
             return false;
