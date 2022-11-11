@@ -29,6 +29,22 @@ namespace WebServer.Controllers
             return _db.Query(new AccountSpecificationById(id)).FirstOrDefault();
         }
 
+        [HttpGET("info")]
+        public Account GetAccountInfo(HttpListenerRequest request, HttpListenerResponse response)
+        {
+            var cookie = request.Cookies["SessionId"];
+            if (cookie is not null && cookie.Value.Contains("IsAuthorize=true"))
+            {
+                var id = int.Parse(cookie.Value.Split("Id=")[1].Split("}")[0]);
+                var result= _db.Query(new AccountSpecificationById(id)).FirstOrDefault();
+                if (result != null)
+                    return result;
+            }
+            response.StatusCode = 401;
+            return null;
+            
+        }
+
         [HttpPOST("post")]
         public void SaveAccounts(string login, string password, HttpListenerResponse response)
         {
@@ -42,7 +58,8 @@ namespace WebServer.Controllers
             var account = _db.Query(new AccountSpecificationByLoginPassword(login, password));
             if (account.Count() > 0)
             {
-                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize: true, Id=Ia1234; Path=/");
+                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize=true Id="
+                    + account.First().Id + "}; Path=/");
                 return true;
             }
             return false;
