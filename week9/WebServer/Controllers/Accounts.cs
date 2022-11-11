@@ -30,10 +30,15 @@ namespace WebServer.Controllers
         }
 
         [HttpPOST("login")]
-        public bool Login(string login, string password)
+        public bool Login(string login, string password, HttpListenerResponse response)
         {
-            if (_db.Query(new AccountSpecificationByLoginPassword(login, password)).Count() > 0)
+            var account = _db.Query(new AccountSpecificationByLoginPassword(login, password));
+            if (account.Count() > 0)
+            {
+                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize: true, Id="
+                    + account.First().Id.ToString() + "}; Path=/");
                 return true;
+            }
             return false;
         }
     }
