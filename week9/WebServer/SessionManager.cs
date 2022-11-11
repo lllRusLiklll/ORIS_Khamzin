@@ -16,7 +16,7 @@ namespace WebServer
         public void CreateSession(Session session)
         {
             var cacheEntryOptions = new MemoryCacheEntryOptions()
-                .SetSlidingExpiration(TimeSpan.FromSeconds(15));
+                .SetSlidingExpiration(TimeSpan.FromSeconds(120));
             _cache.Set(session.Id, session, cacheEntryOptions);
         }
 
