@@ -11,9 +11,16 @@ namespace WebServer.Controllers
             new AccountRepository(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SteamDB;Integrated Security=True;");
 
         [HttpGET("list")]
-        public List<Account> GetAccounts()
+        public List<Account> GetAccounts(HttpListenerRequest request, HttpListenerResponse response)
         {
-            return _db.Query(new AccountSpecification());
+            var cookie = request.Cookies["SessionId"];
+            if (cookie is not null && cookie.Value.Contains("IsAuthorize: true"))
+                return _db.Query(new AccountSpecification());
+            else
+            {
+                response.StatusCode = 401;
+                return null;
+            }
         }
 
         [HttpGET("item")]
@@ -35,8 +42,7 @@ namespace WebServer.Controllers
             var account = _db.Query(new AccountSpecificationByLoginPassword(login, password));
             if (account.Count() > 0)
             {
-                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize: true, Id="
-                    + account.First().Id.ToString() + "}; Path=/");
+                response.Headers.Set("Set-Cookie", "SessionId={IsAuthorize: true, Id=Ia1234; Path=/");
                 return true;
             }
             return false;

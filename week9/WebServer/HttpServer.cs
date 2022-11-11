@@ -187,6 +187,7 @@ namespace WebServer
                                             .Skip(3)
                                             .Select(s => s.Replace("/", ""))
                                             .ToList<object>();
+                    strParams.Add(request);
                     break;
                 case "POST":
                     using (var stream = new StreamReader(request.InputStream, request.ContentEncoding))
@@ -199,8 +200,7 @@ namespace WebServer
                     return false;
             }
 
-            if (method.GetParameters().Where(x => x.ParameterType == typeof(HttpListenerResponse)).Count() == 1)
-                strParams.Add(response);
+            strParams.Add(response);
 
 
             object[] queryParams = method.GetParameters()
