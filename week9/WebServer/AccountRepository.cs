@@ -68,4 +68,21 @@ namespace WebServer
             return $"WHERE Id={_id}";
         }
     }
+
+    public class AccountSpecificationByLoginPassword : ISqlSpecification
+    {
+        private readonly string _login;
+        private readonly string _password;
+
+        public AccountSpecificationByLoginPassword(string login, string password)
+        {
+            _login = login;
+            _password = password;
+        }
+
+        public string ToSqlClauses()
+        {
+            return $"WHERE Login='{_login}' AND Password='{_password}'";
+        }
+    }
 }

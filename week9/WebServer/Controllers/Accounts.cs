@@ -28,6 +28,14 @@ namespace WebServer.Controllers
             _db.InsertAccount(new Account() { Login = login, Password = password });
             response.Redirect("https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header");
         }
+
+        [HttpPOST("login")]
+        public bool Login(string login, string password)
+        {
+            if (_db.Query(new AccountSpecificationByLoginPassword(login, password)).Count() > 0)
+                return true;
+            return false;
+        }
     }
 
     public class Account
